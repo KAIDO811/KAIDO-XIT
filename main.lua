@@ -109,7 +109,7 @@ AddBtn("🚀 Superman Fly", Color3.fromRGB(0, 120, 255), function()
     end
 end)
 
-AddBtn("📏 Big Hitbox", Color3.fromRGB(100, 0, 200), function()
+AddBtn("تكبير هيتبوكس (غيرتها عشانك يا جعفر)", Color3.fromRGB(100, 0, 200), function()
     _G.HB_Enabled = true
     task.spawn(function()
         while _G.HB_Enabled do
@@ -154,7 +154,7 @@ AddBtn("🌙 Night Vision", Color3.fromRGB(0, 255, 100), function()
     game.Lighting.OutdoorAmbient = nv and Color3.new(0, 1, 0) or Color3.new(0.5, 0.5, 0.5)
 end)
 
-AddBtn("📉 Tracer/ESP", Color3.fromRGB(0, 150, 255), function()
+AddBtn("كشف اماكن (همين غيرتها عشانك)", Color3.fromRGB(0, 150, 255), function()
     for _, v in pairs(game.Players:GetPlayers()) do
         if v ~= lp and v.Character then
             local h = Instance.new("Highlight", v.Character)
