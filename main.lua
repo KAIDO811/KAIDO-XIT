@@ -88,7 +88,7 @@ AddSlider("Fly Speed", 10, 500, 100, function(v) flySpeed = v end)
 AddSlider("Walk Speed", 16, 500, 16, function(v) hum.WalkSpeed = v end)
 AddSlider("Jump Power", 50, 500, 50, function(v) hum.JumpPower = v end)
 
-AddBtn("🚀 Superman Fly", Color3.fromRGB(0, 120, 255), function()
+AddBtn("طيران", Color3.fromRGB(0, 120, 255), function()
     flying = not flying
     if flying then
         local bv = Instance.new("BodyVelocity", root)
@@ -124,7 +124,7 @@ AddBtn("تكبير هيتبوكس (غيرتها عشانك يا جعفر)", Colo
     end)
 end)
 
-AddBtn("🎯 Aimlock", Color3.fromRGB(200, 0, 0), function()
+AddBtn("🎯 تتبع الناس", Color3.fromRGB(200, 0, 0), function()
     _G.Aim = not _G.Aim
     task.spawn(function()
         while _G.Aim do
@@ -142,13 +142,13 @@ AddBtn("🎯 Aimlock", Color3.fromRGB(200, 0, 0), function()
     end)
 end)
 
-AddBtn("🛡️ Admin Detector", Color3.fromRGB(255, 150, 0), function()
+AddBtn("🛡️ كشف ادمن", Color3.fromRGB(255, 150, 0), function()
     game.Players.PlayerAdded:Connect(function(plr)
         game.StarterGui:SetCore("SendNotification", {Title = "Admin Check", Text = plr.Name .. " joined!"})
     end)
 end)
 
-AddBtn("🌙 Night Vision", Color3.fromRGB(0, 255, 100), function()
+AddBtn("🌙 رؤية ليلية", Color3.fromRGB(0, 255, 100), function()
     nv = not nv
     game.Lighting.Brightness = nv and 3 or 1
     game.Lighting.OutdoorAmbient = nv and Color3.new(0, 1, 0) or Color3.new(0.5, 0.5, 0.5)
@@ -163,7 +163,7 @@ AddBtn("كشف اماكن (همين غيرتها عشانك)", Color3.fromRGB(0,
     end
 end)
 
-AddBtn("🧱 Noclip", Color3.fromRGB(80, 80, 80), function()
+AddBtn("🧱 اختراق جدران", Color3.fromRGB(80, 80, 80), function()
     noclip = not noclip
     game:GetService("RunService").Stepped:Connect(function()
         if noclip then
